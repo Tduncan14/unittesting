@@ -34,7 +34,7 @@ function HotelDetail() {
     <>
       {navigate && (
         <NavBar
-          goBack={() => navigate(-1)}
+          goBack={() => navigate('/')}
           openForm={() => navigate(`/hotel/${hotelId}/new`)}
           title={hotel && hotel.title}
         />
