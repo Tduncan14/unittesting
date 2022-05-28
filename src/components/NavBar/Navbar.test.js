@@ -6,12 +6,12 @@ import Navbar from './NavBar';
 
 
 
-test('The Navbar component should respond to button click',() => {
+test('The Navbar component should respond to button clicks',() => {
 
 
     const mockFunction = jest.fn()
-    render(<Navbar goBack={mockFunction} />)
-    fireEvent.click(screen.getByText('<Go Back'))  
+    render(<Navbar goBack={mockFunction} openForm={mockFunction} />)
+    fireEvent.click(screen.getByText('< Go Back'))  
     expect(mockFunction).toHaveBeenCalled();
 
     fireEvent.click(screen.getByText('+ Add Review'))
